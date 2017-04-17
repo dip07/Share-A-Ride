@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.company1.coms510.ride2isu.MainActivity">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_preferences"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="goToSettings"/>
+
+    <Button
+        android:text="View Profile"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_profile_id"
+        android:onClick="goToViewProfile"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignStart="@+id/my_settings_button_id"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:text="View Available Rides"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_avail_rides_button_id"
+        android:onClick="goToViewAvailableRides"
+        android:layout_alignTop="@+id/offer_ride_button_id"
+        android:layout_alignStart="@+id/requestedRidesBtn"
+        android:layout_marginTop="56dp" />
+
+    <Button
+        android:text="Offer Ride"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/offer_ride_button_id"
+        android:onClick="goToOfferRideActivity"
+        android:layout_marginTop="56dp"
+        android:layout_alignTop="@+id/my_settings_button_id"
+        android:layout_alignStart="@+id/view_avail_rides_button_id" />
+
+    <Button
+        android:text="My Settings"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_settings_button_id"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/view_profile_id"
+        android:layout_alignStart="@+id/offer_ride_button_id" />
+
+    <Button
+        android:text="Requested Rides"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/requestedRidesBtn"
+        android:onClick="viewRequestedRides"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/view_avail_rides_button_id"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="911"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:id="@+id/call_911_id"
+        android:onClick="goTo911"/>
+
+
+</RelativeLayout>

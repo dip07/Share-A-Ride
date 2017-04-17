@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_ride_running"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.company1.coms510.ride2isu.RideRunningFragment"
+    tools:showIn="@layout/activity_ride_running">
+
+
+    <TextView
+        android:text="Riders List"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/ridersList_id"
+        android:textSize="22sp"
+        android:textColor="@color/Black" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ridersList_id"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:layout_above="@+id/endRide_id"
+        android:id="@+id/view_riders_id" />
+
+    <Button
+        android:text="Emergency - Call 911"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_call_911_id"
+        android:onClick="call911"
+        android:layout_marginBottom="36dp"
+        android:textColor="@color/White"
+        android:background="@color/Red"
+        android:textSize="22sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="end ride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/endRide_id"
+        android:textColor="@color/Red"
+        android:onClick="goToMainScreen"
+        android:layout_above="@+id/start_call_911_id"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "203401330314",
+    "firebase_url": "https://fir-testing-a4dd8.firebaseio.com",
+    "project_id": "fir-testing-a4dd8",
+    "storage_bucket": "fir-testing-a4dd8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203401330314:android:e764b5eb011579fc",
+        "android_client_info": {
+          "package_name": "com.company1.coms510.ride2isu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203401330314-0fc5euu8dllkrrucs8lha82dq9eun6fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIZBVCoTT01L1SFzaVs1YKHyxAY0d9MP8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

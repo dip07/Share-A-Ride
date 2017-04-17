@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Welcome to Ride2Cy"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:textColor="#FF0000"
+                android:id="@+id/titleView"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Full Name:"
+                android:textColor="#000000"
+                android:id="@+id/fullNameView"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/titleView"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullNameEditText"
+                android:layout_below="@+id/titleView"
+                android:layout_alignParentEnd="true"
+                android:hint="FirstName LastName"
+                android:layout_alignBottom="@id/fullNameView"
+                android:layout_toEndOf="@+id/fullNameView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Email:"
+                android:id="@+id/emailView"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/fullNameEditText"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailEditText"
+                android:layout_below="@+id/fullNameEditText"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/emailView"
+                android:hint="Enter your email address"
+                android:layout_toEndOf="@+id/emailView" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select id type and input id below"
+                android:id="@+id/textViewCheckBox"
+                android:layout_below="@+id/dobView"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DL#"
+                android:id="@+id/dlBox"
+                android:layout_below="@+id/textViewCheckBox"
+                android:layout_alignParentStart="true"
+                android:checked="false"
+                android:onClick="selectCheckBox"
+                android:textColor="#000000"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passport#"
+                android:id="@+id/passportBox"
+                android:layout_below="@+id/textViewCheckBox"
+                android:layout_toEndOf="@+id/dlBox"
+                android:onClick="selectCheckBox"
+                android:checked="false"
+                android:textColor="#000000"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SS#"
+                android:id="@+id/ssBox"
+                android:layout_below="@+id/textViewCheckBox"
+                android:layout_toEndOf="@+id/passportBox"
+                android:onClick="selectCheckBox"
+                android:checked="false" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idEditText"
+                android:layout_below="@+id/dlBox"
+                android:hint="Type in your ID here"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="DOB:"
+                android:id="@+id/dobView"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/emailEditText"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dobEditText"
+                android:layout_below="@+id/emailView"
+                android:layout_alignEnd="@+id/textViewCheckBox"
+                android:layout_toEndOf="@+id/dobView"
+                android:layout_alignBottom="@+id/dobView"
+                android:hint= "MM/DD/YYYY" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upload"
+                android:id="@+id/uploadButton"
+                android:layout_below="@+id/idEditText"
+                android:textColor="#FF0000"
+                android:layout_toStartOf="@+id/titleView"
+                android:onClick="uploadClicked"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Upload picture with button"
+                android:id="@+id/uploadView"
+                android:layout_alignBottom="@+id/uploadButton"
+                android:layout_toEndOf="@+id/uploadButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Password:"
+                android:layout_marginTop="10dp"
+                android:id="@+id/passwordView"
+                android:layout_below="@+id/userNamelView"
+                android:layout_alignParentStart="true"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Confirm Password:"
+                android:id="@+id/confirmPasswordView"
+                android:layout_below="@+id/passwordView"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/ssBox" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadView"
+                android:inputType="textPassword"
+                android:id="@+id/passwordEditText"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"
+                android:hint="Enter password"
+                android:layout_alignBottom="@+id/passwordView"
+                android:layout_alignEnd="@+id/passwordView"
+                android:layout_toEndOf="@+id/passwordView" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/confirmPasswordEditText"
+                android:hint="Re-type your password"
+                android:layout_alignBottom="@+id/confirmPasswordView"
+                android:layout_alignStart="@+id/passwordEditText"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/submitButton"
+                android:textColor = "#ff0000"
+                android:layout_marginTop="0dp"
+                android:layout_below="@+id/confirmPasswordEditText"
+                android:layout_alignParentStart="true"
+                android:onClick="submitOnClick"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Username:"
+                android:layout_marginTop="15dp"
+                android:id="@+id/userNamelView"
+                android:layout_below="@id/uploadButton"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userNameEditText"
+                android:layout_alignBottom="@+id/userNamelView"
+                android:layout_alignParentEnd="true"
+                android:hint="Enter a username"
+                android:layout_below="@id/uploadView"
+                android:layout_toEndOf="@+id/userNamelView" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

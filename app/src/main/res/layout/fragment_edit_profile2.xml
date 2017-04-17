@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.company1.coms510.ride2isu.OfferARideActivityFragment$EditProfileFragment"
+    tools:showIn="@layout/activity_edit_profile2">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cast_album_art_placeholder"
+        android:id="@+id/view_picture_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:text="username"
+        android:textSize="20dp"
+        android:background="@color/LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_username_id"
+        android:layout_toEndOf="@+id/username_id"
+        android:layout_marginStart="13dp"
+        android:layout_alignBottom="@+id/username_id" />
+
+    <TextView
+        android:text="Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/email_id"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/view_picture_id"
+        android:contentDescription="Email of the user"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Password"
+        android:layout_marginTop="27dp"
+        android:id="@+id/passwordView"
+        android:layout_below="@+id/edit_picture_id"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Previous password" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/passwordEditText"
+        android:hint="Enter password"
+        android:textColorHint="@color/White"
+        android:background="@color/Black"
+        android:textColor="@color/White"
+        android:layout_alignTop="@+id/passwordView"
+        android:layout_alignStart="@+id/confirmPasswordEditText"
+        android:layout_alignEnd="@+id/confirmPasswordEditText"
+        android:contentDescription="Enter your previous password here" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Confirm Password"
+        android:id="@+id/confirmPasswordView"
+        android:layout_below="@+id/New_password_id"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/confirmPasswordEditText" />
+
+    <TextView
+        android:text="New Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/New_password_id"
+        android:textColor="@color/Black"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/passwordView"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/submitButton_id"
+        android:contentDescription="New Password to be entered"
+        android:textSize="22sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/confirmPasswordEditText"
+        android:hint="Confirm password"
+        android:textColorHint="@color/White"
+        android:background="@color/Black"
+        android:textColor="@color/White"
+        android:layout_below="@+id/New_password_id"
+        android:layout_alignStart="@+id/username_id"
+        android:layout_marginTop="14dp"
+        android:contentDescription="Confirm your new password here" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:hint="New Password"
+        android:textColorHint="@color/White"
+        android:textColor="@color/White"
+        android:background="@color/Black"
+        android:layout_alignBottom="@+id/New_password_id"
+        android:layout_toEndOf="@+id/New_password_id"
+        android:layout_marginBottom="11dp"
+        android:contentDescription="Enter your new password here" />
+
+    <Button
+        android:text="Edit Picture"
+        android:textColor="@color/Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/edit_picture_id"
+        android:layout_below="@+id/view_picture_id"
+        android:layout_toStartOf="@+id/passwordEditText"
+        android:onClick="editPicture"
+        />
+
+    <Button
+        android:text="Take Picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Take_picture_id"
+        android:textColor="@color/Red"
+        android:layout_alignBaseline="@+id/edit_picture_id"
+        android:layout_alignBottom="@+id/edit_picture_id"
+        android:layout_toEndOf="@+id/New_password_id"
+        android:onClick="takePicture"
+        />
+
+    <Button
+        android:text="Save and Return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/returnButton_id"
+        android:textColor="@color/Red"
+        android:layout_below="@+id/submitButton_id"
+        android:layout_alignEnd="@+id/Take_picture_id"
+        android:onClick="goToMainScreen"
+        />
+
+    <TextView
+        android:text="Username"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/username_id"
+        android:layout_below="@+id/email_id"
+        android:layout_alignStart="@+id/email_id" />
+
+    <TextView
+        android:text="email"
+        android:textSize="20dp"
+        android:background="@color/LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_email_id"
+        android:layout_above="@+id/username_id"
+        android:layout_alignStart="@+id/display_username_id" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submitButton_id"
+        android:textColor = "@color/Red"
+        android:onClick="changePassword"
+        android:layout_below="@+id/confirmPasswordView"
+        android:layout_toStartOf="@+id/display_username_id"
+        android:contentDescription="Click here to save changes" />
+
+    <Button
+        android:text="Remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/remove_picture_id"
+        android:textColor="@color/Red"
+        android:onClick="removePicture"
+        android:contentDescription="Remove the display Picture"
+        android:layout_alignBaseline="@+id/Take_picture_id"
+        android:layout_alignBottom="@+id/Take_picture_id"
+        android:layout_alignEnd="@+id/editText" />
+
+</RelativeLayout>

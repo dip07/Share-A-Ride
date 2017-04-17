@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollViewOfferRide"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_offer_aride"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.company1.coms510.ride2isu.OfferARideActivityFragment"
+    tools:showIn="@layout/activity_offer_aride">
+
+    <TextView
+        android:text="Enter Source Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/source_label_id"
+        android:layout_weight="2"
+        android:textColor="@color/Crimson"
+        android:textSize="25dp"
+        android:layout_alignParentStart="true"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/source_text_id"
+        android:width="300dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:paddingTop="5dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/BlanchedAlmond"
+        android:textSize="30dp"
+        android:layout_below="@+id/source_label_id"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Get Source Address"
+        android:onClick="getSourceAddress"
+        />
+
+    <TextView
+        android:text="Enter destination Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dest_label_id"
+        android:textColor="@color/Crimson"
+        android:layout_below="@id/source_text_id"
+        android:layout_alignParentStart="true"
+        android:paddingTop="5dp"
+        android:textSize="25dp"
+        android:layout_weight="2"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dest_text_id"
+        style="@style/Widget.AppCompat.EditText"
+        android:paddingTop="5dp"
+        android:width="300dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/BlanchedAlmond"
+        android:layout_below="@id/dest_label_id"
+        android:textSize="30dp"
+        android:onClick="getDestAddress"
+        android:contentDescription="Get Destination Address"
+        />
+
+    <TextView
+        android:text="Date &amp; Time of Ride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_label_id"
+        android:textColor="@color/Crimson"
+        android:layout_below="@id/dest_text_id"
+        android:layout_alignParentStart="true"
+        android:paddingTop="5dp"
+        android:textSize="25dp"
+        android:layout_weight="2"
+        />
+
+    <Button
+        android:id="@+id/date_pick_id"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Select date"
+        android:paddingTop="25dp"
+        android:layout_weight="2"
+        android:layout_below="@+id/time_text_id"
+        android:onClick="showDatePickerDialog"
+        android:contentDescription="Get Date Dialogue"
+        />
+
+    <Button
+        android:id="@+id/pick_time_id"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Select Time"
+        android:paddingTop="25dp"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/date_pick_id"
+        android:layout_below="@id/time_text_id"
+        android:onClick="showTimePickerDialog"
+        android:contentDescription="Get Time Dialogue"
+        />
+
+    <TextView
+        android:text="No of Person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/count_person_label_id"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/date_pick_id"
+        android:textColor="@color/Crimson"
+        android:layout_marginTop="2dp"
+        android:paddingTop="5dp"
+        android:textSize="25dp"
+        android:layout_weight="2"
+        />
+    <EditText
+        android:id="@+id/count_person_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="2"
+        android:cursorVisible="true"
+        android:digits="123456789"
+        android:paddingTop="5dp"
+        android:width="60dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/White"
+        android:background="@color/Black"
+        android:layout_below="@id/count_person_label_id"
+        style="@style/Widget.AppCompat.EditText"
+        android:textSize="30dp"
+        android:contentDescription="Get no of riders"
+        />
+
+    <Button
+        android:text="Submit Ride Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/count_person_text_id"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp"
+        android:textSize="25dp"
+        android:textColor="@color/Crimson"
+        android:onClick="goToDisplayRideActivity"
+        android:id="@+id/submit_ride_button" />
+
+    <EditText
+        android:id="@+id/time_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:width="300dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/BlanchedAlmond"
+        android:textSize="20dp"
+        android:layout_below="@+id/time_label_id"
+        android:layout_alignParentStart="true"
+        android:onClick="removeErrorFromDate"
+        android:contentDescription="Get DateTime of Ride"
+        />
+
+
+</RelativeLayout>
+</ScrollView>

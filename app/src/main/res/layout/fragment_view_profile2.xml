@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_view_profile2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.company1.coms510.ride2isu.ViewProfileFragment"
+    tools:showIn="@layout/activity_view_profile2">
+
+    <TextView
+        android:text="Date of Birth"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/birthdate"
+        android:layout_below="@+id/fullName_id"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="59dp"
+        android:id="@+id/OK_viewprofile_id"
+        android:textSize="20sp"
+        android:textColor="@color/Red"
+        android:onClick="goToMainActivity"/>
+
+    <TextView
+        android:text="FirstName LastName"
+        android:textSize="20dp"
+        android:background="@color/LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_fullName_id"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/view_picture_id"
+        android:layout_alignStart="@+id/OK_viewprofile_id" />
+
+    <TextView
+        android:text="MM/DD/YYYY"
+        android:textSize="20dp"
+        android:background="@color/LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_birthDate"
+        android:layout_alignBaseline="@+id/birthdate"
+        android:layout_alignBottom="@+id/birthdate"
+        android:layout_alignStart="@+id/display_fullName_id" />
+
+    <TextView
+        android:text="email@example.com"
+        android:background="@color/LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_email_id"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/display_birthDate"
+        android:layout_alignStart="@+id/display_birthDate"
+        android:layout_marginTop="31dp" />
+
+    <TextView
+        android:text="Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Email_id"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/display_email_id"
+        android:layout_alignEnd="@+id/birthdate" />
+
+    <TextView
+        android:text="username"
+        android:textSize="20dp"
+        android:background="@color/LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_username_id"
+        android:layout_below="@+id/display_email_id"
+        android:layout_alignStart="@+id/display_email_id"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:text="Username"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_id"
+        android:layout_alignBaseline="@+id/display_username_id"
+        android:layout_alignBottom="@+id/display_username_id"
+        android:layout_alignStart="@+id/fullName_id" />
+
+    <TextView
+        android:text="Full Name"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fullName_id"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/display_fullName_id"
+        android:layout_alignEnd="@+id/birthdate" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cast_album_art_placeholder"
+        android:id="@+id/view_picture_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/display_username_id" />
+
+
+</RelativeLayout>
