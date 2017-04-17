@@ -3,4 +3,5 @@ this project. I was involved in the **Offer A Ride** part for the project as wel
 
 I used tests for the verification of the module I worked on. 
 Here is a short illustration of my main  coding part:
+
 ![Image](/ShareARide.gif)
